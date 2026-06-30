@@ -1,0 +1,314 @@
+
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vi 2 Trafikskola – Körkort i Bjärred & Lund</title>
+<meta name="description" content="Modern trafikskola i Bjärred. Skräddarsydd körkortsutbildning i Lund med omnejd. Manuell, automat och intensivkurser." />
+<meta property="og:title" content="Vi 2 Trafikskola" />
+<meta property="og:description" content="Skräddarsydd körkortsutbildning i Bjärred och Lund." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: '#FAF0E6',
+          surface: '#F2E6D8',
+          card: '#FFFAF2',
+          foreground: '#241B3A',
+          muted: '#6B6480',
+          border: '#E4D7C5',
+          primary: '#6A5ACD',
+          'primary-foreground': '#FFFFFF',
+        },
+        fontFamily: {
+          display: ['"Barlow Condensed"', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+        boxShadow: {
+          glow: '0 10px 40px -10px rgba(106,90,205,0.5)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: Inter, system-ui, sans-serif; background:#FAF0E6; color:#241B3A; -webkit-font-smoothing: antialiased; }
+  h1,h2,h3,h4 { font-family: "Barlow Condensed", system-ui, sans-serif; letter-spacing:-0.01em; }
+  .boka-input { width:100%; border-radius:.75rem; border:1px solid #E4D7C5; background:#FFFAF2; padding:.7rem .95rem; font-size:1rem; color:inherit; outline:none; transition:border-color .15s, box-shadow .15s; }
+  .boka-input:focus { border-color:#6A5ACD; box-shadow:0 0 0 3px rgba(106,90,205,.25); }
+</style>
+</head>
+<body id="top">
+
+<!-- Header -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300 bg-transparent">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2">
+      <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white">
+        <!-- car icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+      </span>
+      <span class="font-display text-2xl font-extrabold tracking-tight text-primary leading-none">VI 2</span>
+      <span class="font-display text-sm font-semibold tracking-[0.2em] uppercase opacity-80">Trafikskola</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#om-oss" class="text-sm font-medium tracking-wide uppercase opacity-80 hover:text-primary">Om oss</a>
+      <a href="#prislista" class="text-sm font-medium tracking-wide uppercase opacity-80 hover:text-primary">Prislista</a>
+      <a href="#kontakt" class="text-sm font-medium tracking-wide uppercase opacity-80 hover:text-primary">Kontakt</a>
+      <a href="#sociala" class="text-sm font-medium tracking-wide uppercase opacity-80 hover:text-primary">Sociala medier</a>
+      <a href="#kontakt" class="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white hover:brightness-110 transition">Kontakta oss →</a>
+    </nav>
+    <button id="menu-btn" class="md:hidden" aria-label="Meny">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-background/95">
+    <div class="px-5 py-4 flex flex-col gap-3">
+      <a href="#om-oss" class="py-2 text-sm uppercase tracking-wide">Om oss</a>
+      <a href="#prislista" class="py-2 text-sm uppercase tracking-wide">Prislista</a>
+      <a href="#kontakt" class="py-2 text-sm uppercase tracking-wide">Kontakt</a>
+      <a href="#sociala" class="py-2 text-sm uppercase tracking-wide">Sociala medier</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative min-h-[100svh] flex items-center overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1920&q=80" alt="Vy över väg i skymning" class="absolute inset-0 h-full w-full object-cover" />
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(250,240,230,.7), rgba(250,240,230,.55), #FAF0E6);"></div>
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 pt-32 pb-24 w-full">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Bjärred · Lund</p>
+    <h1 class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold uppercase leading-[0.95] max-w-4xl">
+      Börja din resa<br>mot körkortet<br><span class="text-primary">med Vi 2</span>
+    </h1>
+    <p class="mt-6 max-w-xl text-base sm:text-lg opacity-80">
+      En modern trafikskola där kvalitet, säkerhet och struktur står i fokus. Vi guidar dig hela vägen — i din takt eller intensivt.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#prislista" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white hover:brightness-110 transition shadow-glow">Se våra paket →</a>
+      <a href="#kontakt" class="inline-flex items-center gap-2 rounded-full border border-border bg-white/40 backdrop-blur px-7 py-3.5 text-sm font-semibold hover:bg-surface transition">Kontakta oss</a>
+    </div>
+    <p class="mt-10 font-display italic text-primary/90 text-lg">"Ditt mål, vårt samarbete"</p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="om-oss" class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Om oss</p>
+    <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-12 max-w-3xl">Två trafiklärare. En personlig utbildning.</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-5 opacity-90 text-lg leading-relaxed">
+        <p>Vi är två engagerade trafiklärare med bas i <strong>Bjärred</strong> som erbjuder skräddarsydd körkortsutbildning i Lund med omnejd. Hos oss står ditt unika behov i centrum — vi guidar dig hela vägen till målet i en trygg, lugn och pedagogisk miljö.</p>
+        <p>För att ge dig bästa möjliga start kör vi alltid i toppmoderna, säkra fordon. Hos oss väljer du själv om du vill köra manuellt eller automat, och vi övar i de miljöer där du bäst bygger ditt självförtroende.</p>
+        <ul class="grid sm:grid-cols-2 gap-3 pt-4">
+          <li class="flex items-center gap-3 text-base"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span> Manuell & automat</li>
+          <li class="flex items-center gap-3 text-base"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span> Intensivkurser</li>
+          <li class="flex items-center gap-3 text-base"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span> Moderna fordon</li>
+          <li class="flex items-center gap-3 text-base"><span class="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">✓</span> Personlig pedagogik</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1498887960847-2a5e46312788?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bil på kustvägen" loading="lazy" class="rounded-2xl w-full aspect-[4/3] object-cover" />
+        <div class="absolute -bottom-6 -left-6 hidden sm:block bg-primary text-white rounded-xl px-6 py-4 font-display uppercase font-bold shadow-glow">Bjärred · Lund</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="prislista" class="py-24 sm:py-32 bg-surface">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Prislista</p>
+    <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-4 max-w-3xl">Startpaket — allt i ett</h2>
+    <p class="opacity-70 mb-12 max-w-2xl">Våra paket räknas alltid in som dubbellektioner à 80 minuter. Inkluderar Risk 1, Risk 2, teori samt lån av bil till uppkörning inklusive uppvärmningslektion.</p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-20">
+      <!-- Lilla -->
+      <div class="relative rounded-2xl border border-border bg-card p-8 flex flex-col">
+        <p class="text-sm uppercase tracking-wider opacity-60">Startpaket</p>
+        <h3 class="font-display text-3xl font-extrabold uppercase mt-1">Lilla</h3>
+        <p class="opacity-70 mt-2">5 dubbellektioner + Risk 1 & 2 + teori + bil till uppkörning</p>
+        <div class="mt-6 font-display text-4xl font-extrabold text-primary">10 000 kr</div>
+        <button type="button" data-boka="Startpaket Lilla" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white hover:brightness-110 transition">Boka →</button>
+      </div>
+      <!-- Mellan -->
+      <div class="relative rounded-2xl border border-primary bg-primary/5 shadow-glow p-8 flex flex-col">
+        <span class="absolute -top-3 left-8 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Populärast</span>
+        <p class="text-sm uppercase tracking-wider opacity-60">Startpaket</p>
+        <h3 class="font-display text-3xl font-extrabold uppercase mt-1">Mellan</h3>
+        <p class="opacity-70 mt-2">10 dubbellektioner + Risk 1 & 2 + teori + bil till uppkörning</p>
+        <div class="mt-6 font-display text-4xl font-extrabold text-primary">15 000 kr</div>
+        <button type="button" data-boka="Startpaket Mellan" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white hover:brightness-110 transition">Boka →</button>
+      </div>
+      <!-- Stor -->
+      <div class="relative rounded-2xl border border-border bg-card p-8 flex flex-col">
+        <p class="text-sm uppercase tracking-wider opacity-60">Startpaket</p>
+        <h3 class="font-display text-3xl font-extrabold uppercase mt-1">Stor</h3>
+        <p class="opacity-70 mt-2">15 dubbellektioner + Risk 1 & 2 + teori + bil till uppkörning</p>
+        <div class="mt-6 font-display text-4xl font-extrabold text-primary">20 000 kr</div>
+        <button type="button" data-boka="Startpaket Stor" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white hover:brightness-110 transition">Boka →</button>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10">
+      <div class="rounded-2xl border border-border bg-card p-8">
+        <h3 class="font-display text-2xl font-extrabold uppercase mb-6">Lektionspaket</h3>
+        <p class="opacity-70 text-sm mb-6">Endast körlektioner.</p>
+        <ul class="divide-y divide-border">
+          <li class="flex items-center justify-between py-4"><div><p class="font-semibold">Lilla paketet</p><p class="text-sm opacity-60">5 dubbellektioner</p></div><div class="font-display text-2xl font-bold text-primary">5 000 kr</div></li>
+          <li class="flex items-center justify-between py-4"><div><p class="font-semibold">Mellan paketet</p><p class="text-sm opacity-60">10 dubbellektioner</p></div><div class="font-display text-2xl font-bold text-primary">10 000 kr</div></li>
+          <li class="flex items-center justify-between py-4"><div><p class="font-semibold">Stora paketet</p><p class="text-sm opacity-60">15 dubbellektioner</p></div><div class="font-display text-2xl font-bold text-primary">15 000 kr</div></li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-border bg-card p-8">
+        <h3 class="font-display text-2xl font-extrabold uppercase mb-6">Styckpriser</h3>
+        <ul class="divide-y divide-border">
+          <li class="flex items-center justify-between gap-4 py-3"><span>Risk 1</span><span class="font-semibold text-primary whitespace-nowrap">750 kr</span></li>
+          <li class="flex items-center justify-between gap-4 py-3"><span>Risk 2</span><span class="font-semibold text-primary whitespace-nowrap">2 300 kr</span></li>
+          <li class="flex items-center justify-between gap-4 py-3"><span>Teoripaket</span><span class="font-semibold text-primary whitespace-nowrap">1 500 kr</span></li>
+          <li class="flex items-center justify-between gap-4 py-3"><span>Enkel lektion (40 min)</span><span class="font-semibold text-primary whitespace-nowrap">550 kr</span></li>
+          <li class="flex items-center justify-between gap-4 py-3"><span>Dubbellektion (80 min)</span><span class="font-semibold text-primary whitespace-nowrap">1 100 kr</span></li>
+          <li class="flex items-center justify-between gap-4 py-3"><span>Lån av bil vid uppkörning + 40 min uppvärmning</span><span class="font-semibold text-primary whitespace-nowrap">1 300 kr</span></li>
+        </ul>
+        <div class="mt-6 space-y-3 text-sm opacity-70">
+          <p><strong>OBS!</strong> Vid prov tillkommer avgifter som betalas direkt till Trafikverket.</p>
+          <p>Vi erbjuder intensivkurser där lärarna planerar in hela din utbildning från början till slutet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="kontakt" class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Kontakt</p>
+      <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-8">Hör av dig — vi finns här för dig.</h2>
+      <ul class="space-y-5">
+        <li class="flex items-start gap-4"><span class="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 text-primary shrink-0">📍</span><div><p class="text-sm uppercase tracking-wider opacity-60">Adress</p><p class="text-lg font-medium">Neptunivägen 1, Bjärred</p></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 text-primary shrink-0">📞</span><div><p class="text-sm uppercase tracking-wider opacity-60">Telefon</p><a href="tel:+46464331550" class="text-lg font-medium hover:text-primary">046 433 15 50</a></div></li>
+        <li class="flex items-start gap-4"><span class="flex h-11 w-11 items-center justify-center rounded-full bg-primary/15 text-primary shrink-0">✉️</span><div><p class="text-sm uppercase tracking-wider opacity-60">E-post</p><a href="mailto:vi2trafikskola@gmail.com" class="text-lg font-medium hover:text-primary break-all">vi2trafikskola@gmail.com</a></div></li>
+      </ul>
+      <div id="sociala" class="mt-12">
+        <p class="text-sm uppercase tracking-[0.3em] opacity-60 mb-4">Sociala medier</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://instagram.com/vi2trafikskola" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition">Instagram · @vi2trafikskola</a>
+          <a href="https://tiktok.com/@vi2trafikskola" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold hover:border-primary hover:text-primary transition">TikTok · @vi2trafikskola</a>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=1280&q=80" alt="Körlektion" loading="lazy" class="rounded-2xl w-full aspect-[4/3] object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-border bg-surface">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-baseline gap-2">
+      <span class="font-display text-xl font-extrabold text-primary">VI 2</span>
+      <span class="font-display text-xs uppercase tracking-[0.2em] opacity-70">Trafikskola</span>
+    </div>
+    <p class="text-sm opacity-60">© <span id="year"></span> Vi 2 Trafikskola · Bjärred</p>
+  </div>
+</footer>
+
+<!-- Boka Modal -->
+<div id="boka-modal" class="hidden fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-6" role="dialog" aria-modal="true">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" data-close></div>
+  <div class="relative w-full sm:max-w-xl max-h-[92vh] overflow-y-auto rounded-t-3xl sm:rounded-3xl border border-border bg-background shadow-glow">
+    <div class="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-border bg-background/95 backdrop-blur px-6 py-4">
+      <div>
+        <p class="text-primary uppercase tracking-[0.25em] text-[10px] font-semibold">Boka</p>
+        <h2 class="font-display text-2xl font-extrabold uppercase leading-tight">Bokningsförfrågan</h2>
+      </div>
+      <button data-close aria-label="Stäng" class="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-surface">✕</button>
+    </div>
+    <div class="px-6 py-6">
+      <p class="opacity-70 mb-6 text-sm">Fyll i dina uppgifter så återkommer vi så snart vi kan. Skickas till <span class="font-semibold">vi2trafikskola@gmail.com</span>.</p>
+      <div id="boka-sent" class="hidden mb-6 rounded-xl border border-primary/40 bg-primary/10 p-4 text-sm">
+        <p class="font-semibold">Mejlen öppnades i din e-postklient.</p>
+        <p class="opacity-80 mt-1">Om inget hände, skicka direkt till <a class="text-primary underline" href="mailto:vi2trafikskola@gmail.com">vi2trafikskola@gmail.com</a>.</p>
+      </div>
+      <form id="boka-form" class="space-y-4" novalidate>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Fullständigt namn</span><input name="namn" type="text" required maxlength="100" class="boka-input" placeholder="För- och efternamn"></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Telefonnummer</span><input name="telefon" type="tel" required maxlength="30" class="boka-input" placeholder="07X-XXX XX XX"></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">E-post</span><input name="epost" type="email" required maxlength="255" class="boka-input" placeholder="namn@exempel.se"></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Paket</span>
+          <select name="paket" required class="boka-input">
+            <option value="">Välj paket…</option>
+            <option>Startpaket Lilla</option><option>Startpaket Mellan</option><option>Startpaket Stor</option>
+            <option>Lektionspaket Lilla</option><option>Lektionspaket Mellan</option><option>Lektionspaket Stora</option>
+            <option>Risk 1</option><option>Risk 2</option><option>Teoripaket</option>
+            <option>Enkel lektion (40 min)</option><option>Dubbellektion (80 min)</option>
+            <option>Lån av bil vid uppkörning</option><option>Intensivkurs</option><option>Annat / Vet ej</option>
+          </select>
+        </label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Meddelande (valfritt)</span><textarea name="meddelande" rows="3" maxlength="1000" class="boka-input resize-y" placeholder="Berätta gärna mer om dina önskemål…"></textarea></label>
+        <div class="flex flex-col-reverse sm:flex-row gap-3 pt-2">
+          <button type="button" data-close class="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold hover:bg-surface transition">← Avbryt</button>
+          <button type="submit" class="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white hover:brightness-110 transition">Skicka ✉</button>
+        </div>
+        <p class="text-xs opacity-60 text-center">Vi använder din e-postklient — du får granska innan det skickas.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header scroll
+  const header = document.getElementById('site-header');
+  const onScroll = () => {
+    if (window.scrollY > 20) header.classList.add('bg-background/90','backdrop-blur','border-b','border-border'), header.classList.remove('bg-transparent');
+    else header.classList.remove('bg-background/90','backdrop-blur','border-b','border-border'), header.classList.add('bg-transparent');
+  };
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // Booking modal
+  const modal = document.getElementById('boka-modal');
+  const form = document.getElementById('boka-form');
+  const sent = document.getElementById('boka-sent');
+  const openModal = (paket) => {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (paket) form.elements.paket.value = paket;
+  };
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+  document.querySelectorAll('[data-boka]').forEach(b => b.addEventListener('click', () => openModal(b.getAttribute('data-boka'))));
+  modal.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = form.elements;
+    const data = { namn:f.namn.value.trim(), telefon:f.telefon.value.trim(), epost:f.epost.value.trim(), paket:f.paket.value, meddelande:f.meddelande.value.trim() };
+    if (data.namn.length < 2 || data.telefon.length < 6 || !/^\S+@\S+\.\S+$/.test(data.epost) || !data.paket) { alert('Fyll i namn, telefon, giltig e-post och välj paket.'); return; }
+    const subject = `Bokningsförfrågan: ${data.paket}`;
+    const body = `Hej Vi 2 Trafikskola!\n\nJag vill boka följande paket: ${data.paket}\n\nNamn: ${data.namn}\nTelefon: ${data.telefon}\nE-post: ${data.epost}\n\nMeddelande:\n${data.meddelande || '(inget)'}\n`;
+    window.location.href = `mailto:vi2trafikskola@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    sent.classList.remove('hidden');
+  });
+</script>
+</body>
+</html>
