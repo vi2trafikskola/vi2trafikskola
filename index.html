@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="sv">
 <head>
@@ -71,10 +70,10 @@
   </div>
   <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-background/95">
     <div class="px-5 py-4 flex flex-col gap-3">
-      <a href="#om-oss" class="py-2 text-sm uppercase tracking-wide">Om oss</a>
-      <a href="#prislista" class="py-2 text-sm uppercase tracking-wide">Prislista</a>
-      <a href="#kontakt" class="py-2 text-sm uppercase tracking-wide">Kontakt</a>
-      <a href="#sociala" class="py-2 text-sm uppercase tracking-wide">Sociala medier</a>
+      <a href="#om-oss" class="py-2 text-sm uppercase tracking-wide font-medium">Om oss</a>
+      <a href="#prislista" class="py-2 text-sm uppercase tracking-wide font-medium">Prislista</a>
+      <a href="#kontakt" class="py-2 text-sm uppercase tracking-wide font-medium">Kontakt</a>
+      <a href="#sociala" class="py-2 text-sm uppercase tracking-wide font-medium">Sociala medier</a>
     </div>
   </div>
 </header>
@@ -99,7 +98,6 @@
   </div>
 </section>
 
-
 <!-- About -->
 <section id="om-oss" class="py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
@@ -123,7 +121,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- Pricing -->
 <section id="prislista" class="py-24 sm:py-32 bg-surface">
@@ -193,15 +190,56 @@
   </div>
 </section>
 
+<!-- Kontakt -->
+<section id="kontakt" class="py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Kontakt</p>
+    <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-12 max-w-3xl">Hör av dig till oss</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div class="space-y-6 text-lg">
+        <p class="opacity-90">Har du frågor om våra paket, intensivkurser eller vill boka in din första lektion? Tveka inte att höra av dig!</p>
+        <div class="space-y-3">
+          <p><strong>Telefon:</strong> <a href="tel:0464331550" class="text-primary underline">046-433 15 50</a></p>
+          <p><strong>E-post:</strong> <a href="mailto:vi2trafikskola@gmail.com" class="text-primary underline">vi2trafikskola@gmail.com</a></p>
+          <p><strong>Plats:</strong> Bjärred & Lund</p>
+        </div>
+        <div>
+          <button type="button" data-boka="" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white hover:brightness-110 transition shadow-glow">Gör en bokningsförfrågan →</button>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-border bg-card p-8">
+        <h3 class="font-display text-2xl font-extrabold uppercase mb-4">Öppettider</h3>
+        <p class="opacity-70 mb-6">Vi anpassar våra körlektioner efter överenskommelse.</p>
+        <ul class="space-y-3 opacity-90">
+          <li class="flex justify-between border-b border-border pb-2"><span>Måndag – Fredag</span> <span>08:00 – 17:00</span></li>
+          <li class="flex justify-between border-b border-border pb-2"><span>Lördag – Söndag</span> <span>Enligt överenskommelse</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sociala medier -->
+<section id="sociala" class="py-24 sm:py-32 bg-surface">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 text-center">
+    <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Följ oss</p>
+    <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-6">Sociala medier</h2>
+    <p class="opacity-70 max-w-xl mx-auto mb-10">Följ med på vår resa, se tidigare elevers framgångar och få nyheter direkt i flödet!</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="https://instagram.com/vi2trafikskola" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white hover:brightness-110 transition shadow-lg">Instagram: @vi2trafikskola ↗</a>
+      <a href="https://tiktok.com/@vi2trafikskola" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-card px-8 py-4 text-sm font-semibold hover:bg-surface transition">TikTok: @vi2trafikskola ↗</a>
+    </div>
+  </div>
+</section>
   
 <!-- Footer -->
-<footer class="border-t border-border bg-surface">
+<footer class="border-t border-border bg-background">
   <div class="mx-auto max-w-7xl px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
     <div class="flex items-baseline gap-2">
       <span class="font-display text-xl font-extrabold text-primary">VI 2</span>
       <span class="font-display text-xs uppercase tracking-[0.2em] opacity-70">Trafikskola</span>
     </div>
-    <p class="text-sm opacity-60">© <span id="year"></span> Vi 2 Trafikskola · Bjärred</p>
+    <p class="text-sm opacity-60">© <span id="year"></span> Vi 2 Trafikskola · Bjärred · Tel: <a href="tel:0464331550" class="hover:underline">046-433 15 50</a></p>
   </div>
 </footer>
 
@@ -294,3 +332,4 @@
 </script>
 </body>
 </html>
+
