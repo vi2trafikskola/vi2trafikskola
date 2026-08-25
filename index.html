@@ -78,9 +78,9 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- Hero med nya bilden -->
 <section class="relative min-h-[100svh] flex items-center overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1654267195805-7a26be91d9ca?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D](https://images.unsplash.com/photo-1654267195805-7a26be91d9ca?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vy över väg i skymning" class="absolute inset-0 h-full w-full object-cover pointer-events-none" />
+  <img src="https://images.unsplash.com/photo-1654267195805-7a26be91d9ca?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bakgrundsbild" class="absolute inset-0 h-full w-full object-cover pointer-events-none" />
   <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(to bottom, rgba(250,240,230,.7), rgba(250,240,230,.55), #FAF0E6);"></div>
   <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 pt-32 pb-24 w-full">
     <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Bjärred · Lund</p>
@@ -125,14 +125,27 @@
 <!-- Pricing -->
 <section id="prislista" class="py-24 sm:py-32 bg-surface">
   <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    
+    <!-- Kampanj-banner för Risk 1 -->
+    <div class="mb-12 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 shadow-glow">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div>
+          <span class="inline-block bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">Kampanj!</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold uppercase text-primary">Risk 1 för endast 600 kr</h3>
+          <p class="opacity-80 text-sm sm:text-base mt-1">Ordinarie pris 750 kr. Nästa tillfälle: <strong>Söndag 30 augusti kl 11:00</strong>.</p>
+        </div>
+        <button type="button" data-boka="Risk 1" class="whitespace-nowrap inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white hover:brightness-110 transition shadow cursor-pointer">Boka Risk 1 →</button>
+      </div>
+    </div>
+
     <p class="text-primary uppercase tracking-[0.3em] text-xs font-semibold mb-4">Prislista</p>
     <h2 class="font-display text-4xl sm:text-6xl font-extrabold uppercase mb-4 max-w-3xl">Startpaket — allt i ett</h2>
-    <p class="opacity-70 mb-12 max-w-2xl">Våra paket räknas in som körlektioner á 40 minuter. Inkluderar Risk 1, Risk 2, teori samt lån av bil till uppkörning inklusive uppvärmningslektion.</p>
+    <p class="opacity-70 mb-12 max-w-2xl">Våra paket räknas alltid in som körlektioner á 40 minuter. Inkluderar Risk 1, Risk 2, teori samt lån av bil till uppkörning inklusive uppvärmningslektion.</p>
 
     <div class="grid md:grid-cols-2 gap-6 mb-20 max-w-4xl">
       <!-- Lilla -->
       <div class="relative rounded-2xl border border-border bg-card p-8 flex flex-col">
-        <span class="absolute -top-3 left-8 bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Spara 1450 kr</span>
+        <span class="absolute -top-3 left-8 bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Spara 1 450 kr</span>
         <p class="text-sm uppercase tracking-wider opacity-60 mt-1">Startpaket</p>
         <h3 class="font-display text-3xl font-extrabold uppercase mt-1">Lilla</h3>
         <p class="opacity-70 mt-2">10 körlektioner á 40 min + Risk 1 & 2 + teori + bil till uppkörning</p>
@@ -141,7 +154,7 @@
       </div>
       <!-- Stora -->
       <div class="relative rounded-2xl border border-primary bg-primary/5 shadow-glow p-8 flex flex-col">
-        <span class="absolute -top-3 left-8 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Spara 1950 kr · Populärast</span>
+        <span class="absolute -top-3 left-8 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Spara 1 950 kr · Populärast</span>
         <p class="text-sm uppercase tracking-wider opacity-60 mt-1">Startpaket</p>
         <h3 class="font-display text-3xl font-extrabold uppercase mt-1">Stora</h3>
         <p class="opacity-70 mt-2">20 körlektioner á 40 min + Risk 1 & 2 + teori + bil till uppkörning</p>
@@ -151,7 +164,7 @@
     </div>
 
     <div class="grid lg:grid-cols-2 gap-10">
-            <div class="rounded-2xl border border-border bg-card p-8">
+      <div class="rounded-2xl border border-border bg-card p-8">
         <h3 class="font-display text-2xl font-extrabold uppercase mb-6">Lektionspaket</h3>
         <p class="opacity-70 text-sm mb-6">Endast körlektioner á 40 min.</p>
         <ul class="divide-y divide-border">
@@ -177,7 +190,6 @@
           </li>
         </ul>
       </div>
-
       <div class="rounded-2xl border border-border bg-card p-8">
         <h3 class="font-display text-2xl font-extrabold uppercase mb-6">Styckpriser</h3>
         <ul class="divide-y divide-border">
@@ -205,21 +217,20 @@
     <div class="grid md:grid-cols-2 gap-12">
       <div class="space-y-6 text-lg">
         <p class="opacity-90">Har du frågor om våra paket, intensivkurser eller vill boka in din första lektion? Tveka inte att höra av dig!</p>
-                <div class="space-y-3">
+        <div class="space-y-3">
           <p><strong>Telefon:</strong> <a href="tel:0464331550" class="text-primary font-semibold">046-433 15 50</a></p>
           <p><strong>E-post:</strong> <a href="mailto:vi2trafikskola@gmail.com" class="text-primary font-semibold">vi2trafikskola@gmail.com</a></p>
           <p><strong>Plats:</strong> Bjärred & Lund</p>
         </div>
-
         <div>
           <button type="button" data-boka="" class="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-white hover:brightness-110 transition shadow-glow cursor-pointer">Gör en bokningsförfrågan →</button>
         </div>
       </div>
       <div class="rounded-2xl border border-border bg-card p-8">
         <h3 class="font-display text-2xl font-extrabold uppercase mb-4">Öppettider</h3>
-        <p class="opacity-70 mb-6">Vi anpassar våra körlektioner efter överenskommelse under helger.</p>
+        <p class="opacity-70 mb-6">Vi anpassar våra körlektioner efter överenskommelse.</p>
         <ul class="space-y-3 opacity-90">
-          <li class="flex justify-between border-b border-border pb-2"><span>Måndag – Fredag</span> <span>08:00 – 18:00</span></li>
+          <li class="flex justify-between border-b border-border pb-2"><span>Måndag – Fredag</span> <span>08:00 – 17:00</span></li>
           <li class="flex justify-between border-b border-border pb-2"><span>Lördag – Söndag</span> <span>Enligt överenskommelse</span></li>
         </ul>
       </div>
@@ -340,5 +351,6 @@
 </script>
 </body>
 </html>
+
 
 
