@@ -269,6 +269,7 @@
       </div>
       <form id="boka-form" class="space-y-4" novalidate>
         <label class="block"><span class="block text-sm font-semibold mb-1.5">Fullständigt namn</span><input name="namn" type="text" required maxlength="100" class="boka-input" placeholder="För- och efternamn"></label>
+        <label class="block"><span class="block text-sm font-semibold mb-1.5">Personnummer</span><input name="personnummer" type="text" required maxlength="13" class="boka-input" placeholder="ÅÅÅÅMMDD-XXXX"></label>
         <label class="block"><span class="block text-sm font-semibold mb-1.5">Telefonnummer</span><input name="telefon" type="tel" required maxlength="30" class="boka-input" placeholder="07X-XXX XX XX"></label>
         <label class="block"><span class="block text-sm font-semibold mb-1.5">E-post</span><input name="epost" type="email" required maxlength="255" class="boka-input" placeholder="namn@exempel.se"></label>
         <label class="block"><span class="block text-sm font-semibold mb-1.5">Paket</span>
@@ -329,16 +330,29 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const f = form.elements;
-    const data = { namn:f.namn.value.trim(), telefon:f.telefon.value.trim(), epost:f.epost.value.trim(), paket:f.paket.value, meddelande:f.meddelande.value.trim() };
-    if (data.namn.length < 2 || data.telefon.length < 6 || !/^\S+@\S+\.\S+$/.test(data.epost) || !data.paket) { alert('Fyll i namn, telefon, giltig e-post och välj paket.'); return; }
+    const data = { 
+      namn: f.namn.value.trim(), 
+      personnummer: f.personnummer.value.trim(), 
+      telefon: f.telefon.value.trim(), 
+      epost: f.epost.value.trim(), 
+      paket: f.paket.value, 
+      meddelande: f.meddelande.value.trim() 
+    };
+    
+    if (data.namn.length < 2 || data.personnummer.length < 6 || data.telefon.length < 6 || !/^\S+@\S+\.\S+$/.test(data.epost) || !data.paket) { 
+      alert('Fyll i namn, personnummer, telefon, giltig e-post och välj paket.'); 
+      return; 
+    }
+    
     const subject = `Bokningsförfrågan: ${data.paket}`;
-    const body = `Hej Vi 2 Trafikskola!\n\nJag vill boka följande paket: ${data.paket}\n\nNamn: ${data.namn}\nTelefon: ${data.telefon}\nE-post: ${data.epost}\n\nMeddelande:\n${data.meddelande || '(inget)'}\n`;
+    const body = `Hej Vi 2 Trafikskola!\n\nJag vill boka följande paket: ${data.paket}\n\nNamn: ${data.namn}\nPersonnummer: ${data.personnummer}\nTelefon: ${data.telefon}\nE-post: ${data.epost}\n\nMeddelande:\n${data.meddelande || '(inget)'}\n`;
     window.location.href = `mailto:vi2trafikskola@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     sent.classList.remove('hidden');
   });
 </script>
 </body>
 </html>
+
 
 
 
